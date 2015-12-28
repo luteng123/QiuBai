@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="@string/menu_item_1" android:icon="@mipmap/ic_qiushi_normal" android:id="@+id/item_QiuShi"/>
+        <item android:title="@string/menu_item_2" android:icon="@mipmap/ic_qiuyoucircle_normal" android:id="@+id/item_QiuYouQuan"/>
+        <item android:title="@string/menu_item_3" android:icon="@mipmap/ic_nearby_normal" android:id="@+id/item_select"/>
+        <item android:title="@string/menu_item_4" android:icon="@mipmap/ic_message_normal" android:id="@+id/item_small_note"/>
+        <item android:title="@string/menu_item_me" android:icon="@mipmap/ic_mine_normal"  android:id="@+id/item_mine"/>
+    </group>
+    <item android:title="@string/menu_small_group">
+        <menu>
+            <item android:title="@string/setting" android:id="@+id/test_item_setting"/>
+            <item android:title="@string/exit" android:id="@+id/test_item_exit"/>
+        </menu>
+    </item>
+
+
+
+</menu>
