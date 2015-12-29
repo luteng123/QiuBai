@@ -33,12 +33,13 @@ public class MainVideoFragment extends Fragment implements Callback<VideoEntity>
         adapter = new VideoAdapter(context);
         listView.setAdapter(adapter);
 
-//        //下载图片的网络任务
-//        Retrofit build = new Retrofit.Builder()
-//                .build();
-//        QsbkService service = build.create(QsbkService.class);
-//        call = service.getVideoData("video", 1);
-//        call.enqueue(this);
+        //下载图片的网络任务
+        Retrofit build = new Retrofit.Builder().baseUrl("http://m2.qiushibaike.com")
+                .addConverterFactory(GsonConverterFactory.create())//json字符串转换的list<ItemEntity>
+                .build();
+        QsbkService service = build.create(QsbkService.class);
+        call = service.getVideoData("video", 1);
+        call.enqueue(this);
 
     }
     public static MainVideoFragment newInstance(String text){

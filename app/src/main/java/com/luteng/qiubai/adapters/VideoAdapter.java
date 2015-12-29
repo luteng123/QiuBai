@@ -49,7 +49,7 @@ public class VideoAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView==null){
-            convertView = LayoutInflater.from(context).inflate(R.layout.item,parent,false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_video,parent,false);
             convertView.setTag(new ViewHolder(convertView));
         }
         VideoEntity.ItemsEntity item = list.get(position);
@@ -68,7 +68,7 @@ public class VideoAdapter extends BaseAdapter{
             Log.d("FragmentExclusiveAdapter", "iconUrl = " + s);
 
         }
-        if(item.getImage()==null){
+        if(item.getPic_url()==null){
             holder.image.setVisibility(View.GONE);
         }else{
             Picasso.with(context).load(item.getPic_url())
@@ -76,6 +76,8 @@ public class VideoAdapter extends BaseAdapter{
                     .error(R.mipmap.ic_launcher)//下载失败的图片
                     .resize(parent.getWidth(),0)//防止是0的情况
                     .into(holder.image);
+            Log.d("VideoAdapter", "Pic_url = "+item.getPic_url());
+
         }
         return convertView;
     }
@@ -88,14 +90,12 @@ public class VideoAdapter extends BaseAdapter{
     private static class ViewHolder{
         private ImageView icon;
         private TextView name;
-        //private TextView content;
         private ImageView image;
         //构造找到控件
         public ViewHolder(View view){
-            icon = (ImageView) view.findViewById(R.id.fragment_exclusive_user_icon);
-            name = (TextView) view.findViewById(R.id.fragment_exclusive_user_name);
-            //content = (TextView) view.findViewById(R.id.fragment_exclusive_content);
-            image = (ImageView) view.findViewById(R.id.fragment_exclusive_image);
+            icon = (ImageView) view.findViewById(R.id.fragment_video_user_icon);
+            name = (TextView) view.findViewById(R.id.fragment_video_user_name);
+            image = (ImageView) view.findViewById(R.id.fragment_video_image);
         }
 
     }
