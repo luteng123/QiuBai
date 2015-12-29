@@ -5,10 +5,10 @@
              tools:context="com.luteng.qiubai.fragments.MainVideoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:id="@+id/fragment_video_text_view_1"
+    <ListView
+            android:id="@+id/fragment_video_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="视频"/>
+            />
 
 </FrameLayout>

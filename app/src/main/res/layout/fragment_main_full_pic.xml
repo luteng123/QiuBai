@@ -5,10 +5,9 @@
              tools:context="com.luteng.qiubai.fragments.MainFullPicFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:id="@+id/fragment_full_text_pic_view_1"
+    <ListView
+            android:id="@+id/fragment_full_piv_list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="纯图"/>
+            android:layout_height="match_parent"/>
 
 </FrameLayout>
