@@ -17,4 +17,8 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="comment_small">好笑</string>
+    <string name="comment_comment">评论</string>
+    <string name="comment_share">分享</string>
+    <string name="article_user_name">用户名</string>
 </resources>

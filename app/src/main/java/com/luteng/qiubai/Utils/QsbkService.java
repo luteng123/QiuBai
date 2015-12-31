@@ -1,5 +1,6 @@
 package com.luteng.qiubai.Utils;
 
+import com.luteng.qiubai.entity.CommentEntity;
 import com.luteng.qiubai.entity.TotalEntity;
 import com.luteng.qiubai.entity.VideoEntity;
 import retrofit.Call;
@@ -17,4 +18,6 @@ public interface QsbkService {
     //此处为Get请求，如果是Post，则为@Field
     @GET("article/list/{type}")
     Call<VideoEntity> getVideoData(@Path("type")String type,@Query("page")int page);
+    @GET("article/{c_id}/comments")
+    Call<CommentEntity> getCommentData(@Path("c_id")String id,@Query("page")int page);
 }

@@ -10,6 +10,13 @@
     <!--自定义主题-->
     <style name="CustomAppTheme" parent="AppTheme">
         <!-- Customize your theme here. -->
+        <!--下面是透明的-->
+
+<!--        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>-->
+
         <item name="colorPrimary">@color/colorCustomTheme</item>
         <item name="colorPrimaryDark">@color/colorCustomTheme</item>
         <item name="colorAccent">@color/colorAccent</item>

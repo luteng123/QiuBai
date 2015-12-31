@@ -15,6 +15,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import com.luteng.qiubai.adapters.MainPagerAdapter;
@@ -123,4 +124,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+//    /*按钮的点击必须在Activity中，可以利用接口回调 setTag，通过数据改变驱动界面变化*/
+//    public void btnComment(View view) {
+//        startActivity(new Intent(this,ArticlesActivity.class));
+//    }
 }

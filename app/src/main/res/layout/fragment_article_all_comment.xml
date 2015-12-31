@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+              tools:context="com.luteng.qiubai.fragments.article.ArticleAllCommentFragment"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             >
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<com.luteng.qiubai.customview.CustomListView-->
+            <!--android:id="@+id/article_all_comment_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+    <com.luteng.qiubai.customview.CustomListView
+            android:id="@+id/article_all_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

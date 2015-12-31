@@ -2,6 +2,7 @@ package com.luteng.qiubai.fragments;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.luteng.qiubai.ArticlesActivity;
 import com.luteng.qiubai.R;
 import com.luteng.qiubai.adapters.MainPagerAdapter;
 
@@ -58,6 +60,7 @@ public class MainFragment extends Fragment {    private ViewPager pager;
         tab.setupWithViewPager(pager);
         return ret;
     }
+
 
 
 }

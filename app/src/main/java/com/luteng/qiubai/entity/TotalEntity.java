@@ -2,6 +2,7 @@ package com.luteng.qiubai.entity;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -95,7 +96,7 @@ public class TotalEntity {
         return items;
     }
 
-    public static class ItemsEntity {
+    public static class ItemsEntity implements Serializable{
         @SerializedName("format")
         private String format;
         @SerializedName("image")
@@ -264,7 +265,7 @@ public class TotalEntity {
             return type;
         }
 
-        public static class UserEntity {
+        public static class UserEntity implements Serializable{
             @SerializedName("avatar_updated_at")
             private int avatar_updated_at;
             @SerializedName("last_visited_at")
@@ -367,7 +368,7 @@ public class TotalEntity {
             }
         }
 
-        public static class VotesEntity {
+        public static class VotesEntity implements Serializable{
             private int down;
             private int up;
 

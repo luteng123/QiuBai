@@ -5,9 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.*;
 import com.luteng.qiubai.R;
 import com.luteng.qiubai.Utils.CircleTransform;
 import com.luteng.qiubai.Utils.Enjoiner;
@@ -91,6 +89,14 @@ public class VideoAdapter extends BaseAdapter{
         private ImageView icon;
         private TextView name;
         private ImageView image;
+
+        private LinearLayout commentLinear;
+        private TextView small;
+        private TextView comment;
+        private TextView share;
+        private TextView regeneration;
+        private RadioGroup group;
+        private ImageButton commentButton;
         //构造找到控件
         public ViewHolder(View view){
             icon = (ImageView) view.findViewById(R.id.fragment_video_user_icon);

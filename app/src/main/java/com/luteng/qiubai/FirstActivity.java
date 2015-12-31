@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.nio.InvalidMarkException;
+
 public class FirstActivity extends AppCompatActivity implements Runnable{
     private ImageView imageView;
     private Handler handler = new Handler(){
@@ -21,7 +23,9 @@ public class FirstActivity extends AppCompatActivity implements Runnable{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        ImageView image = (ImageView) findViewById(R.id.first_image_bottom);
         imageView = (ImageView) findViewById(R.id.first_image_view);
+        image.setAdjustViewBounds(true);
         new Thread(this).start();
     }
 
@@ -33,6 +37,7 @@ public class FirstActivity extends AppCompatActivity implements Runnable{
             handler.sendMessage(message);
             Thread.sleep(1000);
             startActivity(new Intent(this,MainActivity.class));
+            finish();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

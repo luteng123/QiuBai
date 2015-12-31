@@ -27,23 +27,122 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-        <Image
+        <ImageView
                 android:id="@+id/fragment_video_image"
                 android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/jingxuan_jingxuanyitu_277250_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 />
         <ImageButton
-                android:id="@+id/fragment_video_image_view"
+                android:id="@+id/fragment_video_image_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@null"
                 android:src="@mipmap/video_play_normal"
                 />
-
-
     </FrameLayout>
+    <LinearLayout
+            android:id="@+id/fragment_video_linear_comment"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+        <TextView
+                android:textColor="#510d0c0c"
+                android:textSize="10sp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/fragment_video_comment_small"
+                android:text="@string/comment_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        <TextView
+                android:id="@+id/fragment_video_comment_comment"
+                android:text="@string/comment_comment"
+                android:layout_marginLeft="5dp"
+                android:textColor="#510d0c0c"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                />
+        <TextView
+                android:id="@+id/fragment_video_comment_circle"
+                android:text="·"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                />
+        <TextView
+                android:id="@+id/fragment_video_comment_share"
+                android:text="@string/comment_share"
+                android:textColor="#510d0c0c"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        <TextView
+
+                android:id="@+id/fragment_video_comment_regeneration"
+                android:text="@string/comment_share"
+                android:textColor="#510d0c0c"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            >
+        <RadioGroup
+                android:id="@+id/fragment_video_comment_radio_group"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+            <RadioButton
+                    android:id="@+id/fragment_video_comment_group_button_support"
+                    android:button="@null"
+                    android:drawableTop="@drawable/fragment_tab_support_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            <RadioButton
+                    android:id="@+id/fragment_video_comment_group_button_unsupport"
+                    android:button="@null"
+                    android:drawableTop="@drawable/fragment_tab_unsupport_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+        </RadioGroup>
+        <ImageButton
+                android:id="@+id/fragment_video_comment_comment_button"
+                android:background="@null"
+                android:src="@mipmap/qiuyoucircle_comment"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/fragment_exclusive_comment_radio_group"
+                />
+        <ImageButton
+                android:id="@+id/fragment_video_comment_share_button"
+                android:background="@null"
+                android:src="@mipmap/abc_ic_menu_share_holo_light"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"
+                />
+    </RelativeLayout>
+
 
 
 </LinearLayout>
